@@ -7,6 +7,7 @@
  * line should end with a \n
  * If n is 0 or less, the function should only print \n
  *
+ * Return: void
  */
 
 void print_line(int n)
