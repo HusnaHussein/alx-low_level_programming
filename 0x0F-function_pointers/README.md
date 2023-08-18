@@ -72,8 +72,8 @@ You are not allowed to directly call op_add, op_sub, op_mul, op_div or op_mod fr
 You have to use atoi to convert arguments to int
 You are not allowed to use any kind of loop
 You are allowed to use a maximum of 3 if statements
-4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker
-Write a program that prints the opcodes of its own main function.
+# 4. Most hackers are young because young people tend to be adaptable. As long as you remain adaptable, you can always be a good hacker
+## Write a program that prints the opcodes of its own main function.
 
 Usage: ./main number_of_bytes
 Output format:
