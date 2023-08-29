@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -12,21 +9,16 @@
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *temp = *head;
-	listint_t *new = malloc(sizeof(listint_t));
+	listint_t *new;
 
-	if (!new)
+	new = malloc(sizeof(listint_t));
+
+	if (new == NULL)
 		return (NULL);
+
 	new->n = n;
 	new->next = *head;
+	*head = new;
 
-	if (*head == NULL)
-	{
-		*head = new;
-		return (new);
-	}
-	while (temp->next)
-		temp = temp->next;
-	temp->next = new;
-	return (new);
+	return (*head);
 }
