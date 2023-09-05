@@ -9,7 +9,8 @@
 */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd_open, fd_write, count;
+	int fd_open, fd_write;
+	int count= 0;
 
 	if (filename != NULL)
 		fd_open = open(filename, O_WRONLY || O_APPEND);
