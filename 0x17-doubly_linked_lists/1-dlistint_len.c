@@ -1,17 +1,20 @@
 #include "lists.h"
-#include <stdlib.h>
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
-{
-	dlistint_t *new;
 
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-	new->prev = NULL;
-	new->next = *head;
-	new->n = n;
-	if (*head != NULL)
-		(*head)->prev = new;
-	*head = new;
-	return (new);
+/**
+ * dlistint_len - Return list len
+ * @h: struct list
+ * Return: list_len
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t len = 0;
+	int i = 0;
+
+	for (i = 0; h; i++)
+	{
+		len += 1;
+		h = h->next;
+	}
+	return (len);
 }
